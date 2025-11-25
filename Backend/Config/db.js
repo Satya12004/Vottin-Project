@@ -4,10 +4,7 @@ const url=process.env.mongodb_url
 console.log(url)
 const connectTodb=async ()=>{
     try {
-        await mongoose.connect(process.env.MONGODB_URL,{
-              useNewUrlParser: true,
-              useUnifiedTopology: true,
-})
+        await mongoose.connect(process.env.mongodb_url)
         
         console.log("mongodb connected successfully")
     } catch (error) {
