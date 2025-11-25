@@ -15,7 +15,7 @@ const Home = () => {
  
   const getAllpoll=async ()=>{
     try {
-      let res=await axios.get(`http://localhost:8090/poll/getAllpoll`)
+      let res=await axios.get(`https://vottin-project.onrender.com/poll/getAllpoll`)
       console.log(res)
       let question=res.data
       console.log(question)
@@ -41,7 +41,7 @@ const handleOptionChange = (pollId, optionId) => {
     }
 
     try {
-      let res= await axios.post(`http://localhost:8090/poll/SubmitPoll/${poll._id}`, 
+      let res= await axios.post(`https://vottin-project.onrender.com/poll/SubmitPoll/${poll._id}`, 
         { optionId },
         {
           headers: {
@@ -65,7 +65,7 @@ const handleShowresult=async(poll)=>{
   console.log(poll)
   let id=poll._id
   console.log(id)
-  const res= await axios.get(`http://localhost:8090/poll/result/${id}`)
+  const res= await axios.get(`https://vottin-project.onrender.com/poll/result/${id}`)
   let data=res.data
   console.log(data)
   let msg =res.data.msg

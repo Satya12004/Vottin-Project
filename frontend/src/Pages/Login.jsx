@@ -17,7 +17,7 @@ const Login = () => {
                 email:emailRef.current.value,
                 password:passwordRef.current.value
             }
-             let res =await axios.post(`http://localhost:8090/user/get`,obj)
+             let res =await axios.post(`https://vottin-project.onrender.com/user/get`,obj)
              console.log(res)
              if(res.status==200 || res.status==201){
              localStorage.setItem('Poll',JSON.stringify({user:res.data.user,token:res.data.token,login:true}))

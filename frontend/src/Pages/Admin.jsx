@@ -47,7 +47,7 @@ const Admin = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:8090/poll/create",data, {
+      const res = await axios.post("https://vottin-project.onrender.com/poll/create",data, {
           headers:{
         'Authorization':userSlice.token
       }
@@ -73,7 +73,7 @@ const Admin = () => {
   };
 
  const handlegetpolls=async()=>{
-  let res =await axios.get('http://localhost:8090/poll/get',{
+  let res =await axios.get('https://vottin-project.onrender.com/poll/get',{
           headers:{
         'Authorization':userSlice.token
       }
@@ -115,7 +115,7 @@ handlegetpolls()
    let id =show._id
    console.log(id)
     try {
-      const res = await axios.put(`http://localhost:8090/poll/update/${id}`,data, {
+      const res = await axios.put(`https://vottin-project.onrender.com/poll/update/${id}`,data, {
           headers:{
         'Authorization':userSlice.token,
         "Content-Type": "application/json"
@@ -147,7 +147,7 @@ handlegetpolls()
       let id =obj._id
       console.log(id)
       try {
-        let res= await axios.delete(`http://localhost:8090/poll/delete/${id}`,{
+        let res= await axios.delete(`https://vottin-project.onrender.com/poll/delete/${id}`,{
             headers:{
         'Authorization':userSlice.token,
         

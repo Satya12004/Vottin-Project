@@ -17,7 +17,7 @@ const Signup = () => {
             role:RoleRef.current.value
         }
         console.log(obj)
-        let res =await axios.post(`http://localhost:8090/user/create`,obj)
+        let res =await axios.post(`https://vottin-project.onrender.com/user/create`,obj)
         
         let data=res.data;
         let msg=data.message

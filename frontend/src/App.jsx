@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {BrowserRouter,Routes,Route, useNavigate, Navigate} from 'react-router-dom'
-import User from './Pages/User'
+
 import Admin from './Pages/Admin'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
@@ -27,11 +27,10 @@ console.log(role)
        
          <Route path='/signup' element={login===false?<Signup/>:<Navigate to={'/'}/>}/>
         <Route path='/login' element={login===false?<Login/>:<Navigate to={'/'}/>}/>
-        if(role==="admin"){
+        
         <Route path="/admin" element={login===true?<Admin/>:<Navigate to={'/login'}/>}/>
-        }else{
-        <Route path="/user" element={login===true?<User/>:<Navigate to={'/login'}/>} />
-        }
+        
+       
         
         
         <Route path='/' element={login===true?<Home/>:<Navigate to={'/login'}/>}/>
