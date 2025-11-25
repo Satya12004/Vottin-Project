@@ -15,9 +15,10 @@ connectDb()
 app.use(cors())
 app.use(express.json())
 
-app.get("/",(req,res)=>{
-    res.send("hello satya")
-})
+app.get('/', (req, res) => {
+  res.send('Hello from satya');
+});
+
 
 app.use("/user",userRouter)
 app.use("/poll",userPol)
