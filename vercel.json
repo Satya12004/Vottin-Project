@@ -8,8 +8,8 @@
   ],
   "routes": [
     
-     { "source": "/api/(.*)", "destination": "/Backend/Server.js" },
-    { "source": "/(.*)", "destination": "/frontend/build/index.html" }
+     { "src": "/api/(.*)", "dest": "/Backend/Server.js" },
+    { "src": "/(.*)", "dest": "/frontend/build/index.html" }
     
   ]
  
