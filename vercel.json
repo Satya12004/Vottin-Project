@@ -9,8 +9,8 @@
   "routes": [
     
      { "src": "/api/(.*)", "dest": "/Backend/Server.js" },
-    { "src": "/(.*)", "dest": "/frontend/build/index.html" }
+    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
     
   ],
- "outputDirectory": "frontend/build"
+ "outputDirectory": "frontend/dist"
 }
