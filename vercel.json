@@ -11,7 +11,6 @@
      { "src": "/api/(.*)", "dest": "/Backend/Server.js" },
     { "src": "/(.*)", "dest": "/frontend/build/index.html" }
     
-  ]
- 
-
+  ],
+ "outputDirectory": "frontend/build"
 }
